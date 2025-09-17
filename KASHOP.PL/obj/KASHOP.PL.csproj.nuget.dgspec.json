@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\temp project\\KASHOP\\KASHOP.PL\\KASHOP.PL.csproj": {}
+    "D:\\BackendASP\\API\\Project\\KASHOP\\KASHOP.PL\\KASHOP.PL.csproj": {}
   },
   "projects": {
-    "D:\\temp project\\KASHOP\\KASHOP.BLL\\KASHOP.BLL.csproj": {
+    "D:\\BackendASP\\API\\Project\\KASHOP\\KASHOP.BLL\\KASHOP.BLL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\temp project\\KASHOP\\KASHOP.BLL\\KASHOP.BLL.csproj",
+        "projectUniqueName": "D:\\BackendASP\\API\\Project\\KASHOP\\KASHOP.BLL\\KASHOP.BLL.csproj",
         "projectName": "KASHOP.BLL",
-        "projectPath": "D:\\temp project\\KASHOP\\KASHOP.BLL\\KASHOP.BLL.csproj",
+        "projectPath": "D:\\BackendASP\\API\\Project\\KASHOP\\KASHOP.BLL\\KASHOP.BLL.csproj",
         "packagesPath": "C:\\Users\\Al-Madani\\.nuget\\packages\\",
-        "outputPath": "D:\\temp project\\KASHOP\\KASHOP.BLL\\obj\\",
+        "outputPath": "D:\\BackendASP\\API\\Project\\KASHOP\\KASHOP.BLL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -32,8 +32,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\temp project\\KASHOP\\KASHOP.DAL\\KASHOP.DAL.csproj": {
-                "projectPath": "D:\\temp project\\KASHOP\\KASHOP.DAL\\KASHOP.DAL.csproj"
+              "D:\\BackendASP\\API\\Project\\KASHOP\\KASHOP.DAL\\KASHOP.DAL.csproj": {
+                "projectPath": "D:\\BackendASP\\API\\Project\\KASHOP\\KASHOP.DAL\\KASHOP.DAL.csproj"
               }
             }
           }
@@ -79,14 +79,14 @@
         }
       }
     },
-    "D:\\temp project\\KASHOP\\KASHOP.DAL\\KASHOP.DAL.csproj": {
+    "D:\\BackendASP\\API\\Project\\KASHOP\\KASHOP.DAL\\KASHOP.DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\temp project\\KASHOP\\KASHOP.DAL\\KASHOP.DAL.csproj",
+        "projectUniqueName": "D:\\BackendASP\\API\\Project\\KASHOP\\KASHOP.DAL\\KASHOP.DAL.csproj",
         "projectName": "KASHOP.DAL",
-        "projectPath": "D:\\temp project\\KASHOP\\KASHOP.DAL\\KASHOP.DAL.csproj",
+        "projectPath": "D:\\BackendASP\\API\\Project\\KASHOP\\KASHOP.DAL\\KASHOP.DAL.csproj",
         "packagesPath": "C:\\Users\\Al-Madani\\.nuget\\packages\\",
-        "outputPath": "D:\\temp project\\KASHOP\\KASHOP.DAL\\obj\\",
+        "outputPath": "D:\\BackendASP\\API\\Project\\KASHOP\\KASHOP.DAL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -154,14 +154,14 @@
         }
       }
     },
-    "D:\\temp project\\KASHOP\\KASHOP.PL\\KASHOP.PL.csproj": {
+    "D:\\BackendASP\\API\\Project\\KASHOP\\KASHOP.PL\\KASHOP.PL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\temp project\\KASHOP\\KASHOP.PL\\KASHOP.PL.csproj",
+        "projectUniqueName": "D:\\BackendASP\\API\\Project\\KASHOP\\KASHOP.PL\\KASHOP.PL.csproj",
         "projectName": "KASHOP.PL",
-        "projectPath": "D:\\temp project\\KASHOP\\KASHOP.PL\\KASHOP.PL.csproj",
+        "projectPath": "D:\\BackendASP\\API\\Project\\KASHOP\\KASHOP.PL\\KASHOP.PL.csproj",
         "packagesPath": "C:\\Users\\Al-Madani\\.nuget\\packages\\",
-        "outputPath": "D:\\temp project\\KASHOP\\KASHOP.PL\\obj\\",
+        "outputPath": "D:\\BackendASP\\API\\Project\\KASHOP\\KASHOP.PL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -182,8 +182,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\temp project\\KASHOP\\KASHOP.BLL\\KASHOP.BLL.csproj": {
-                "projectPath": "D:\\temp project\\KASHOP\\KASHOP.BLL\\KASHOP.BLL.csproj"
+              "D:\\BackendASP\\API\\Project\\KASHOP\\KASHOP.BLL\\KASHOP.BLL.csproj": {
+                "projectPath": "D:\\BackendASP\\API\\Project\\KASHOP\\KASHOP.BLL\\KASHOP.BLL.csproj"
               }
             }
           }

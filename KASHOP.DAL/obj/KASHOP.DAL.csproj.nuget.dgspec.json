@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\temp project\\KASHOP\\KASHOP.DAL\\KASHOP.DAL.csproj": {}
+    "D:\\BackendASP\\API\\Project\\KASHOP\\KASHOP.DAL\\KASHOP.DAL.csproj": {}
   },
   "projects": {
-    "D:\\temp project\\KASHOP\\KASHOP.DAL\\KASHOP.DAL.csproj": {
+    "D:\\BackendASP\\API\\Project\\KASHOP\\KASHOP.DAL\\KASHOP.DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\temp project\\KASHOP\\KASHOP.DAL\\KASHOP.DAL.csproj",
+        "projectUniqueName": "D:\\BackendASP\\API\\Project\\KASHOP\\KASHOP.DAL\\KASHOP.DAL.csproj",
         "projectName": "KASHOP.DAL",
-        "projectPath": "D:\\temp project\\KASHOP\\KASHOP.DAL\\KASHOP.DAL.csproj",
+        "projectPath": "D:\\BackendASP\\API\\Project\\KASHOP\\KASHOP.DAL\\KASHOP.DAL.csproj",
         "packagesPath": "C:\\Users\\Al-Madani\\.nuget\\packages\\",
-        "outputPath": "D:\\temp project\\KASHOP\\KASHOP.DAL\\obj\\",
+        "outputPath": "D:\\BackendASP\\API\\Project\\KASHOP\\KASHOP.DAL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

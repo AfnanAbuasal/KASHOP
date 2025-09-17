@@ -1,4 +1,4 @@
-﻿using KASHOP.BLL.Services;
+﻿using KASHOP.BLL.Services.Interfaces;
 using KASHOP.DAL.DTO.Requests;
 using KASHOP.DAL.DTO.Responses;
 using Microsoft.AspNetCore.Http;
@@ -18,15 +18,12 @@ namespace KASHOP.PL.Controllers
         }
 
         [HttpGet("")]
-        public IActionResult GetAll()
-        {
-            return Ok(_categoryService.GetAllCategories());
-        }
+        public IActionResult GetAll() => Ok(_categoryService.GetAll());
 
         [HttpGet("{ID}")]
         public IActionResult GetByID([FromRoute] int ID)
         {
-            var category = _categoryService.GetCategoryByID(ID);
+            var category = _categoryService.GetByID(ID);
             if (category is null) return NotFound();
             return Ok(category);
         }
@@ -34,14 +31,14 @@ namespace KASHOP.PL.Controllers
         [HttpPost]
         public IActionResult Create([FromBody] CategoryRequest request)
         {
-            var ID = _categoryService.CreateCategory(request);
+            var ID = _categoryService.Create(request);
             return Ok(CreatedAtAction(nameof(GetByID), new { ID }));
         }
 
         [HttpPatch("{ID}")]
         public IActionResult Update([FromRoute] int ID, [FromBody] CategoryRequest request)
         {
-            var updated = _categoryService.UpdateCategory(ID, request);
+            var updated = _categoryService.Update(ID, request);
             return updated > 0 ? Ok() : NotFound();
         }
 
@@ -55,7 +52,7 @@ namespace KASHOP.PL.Controllers
         [HttpDelete("{ID}")]
         public IActionResult Delete([FromRoute] int ID)
         {
-            var deleted = _categoryService.DeleteCategory(ID);
+            var deleted = _categoryService.Delete(ID);
             return deleted > 0 ? Ok() : NotFound();
         }
     }

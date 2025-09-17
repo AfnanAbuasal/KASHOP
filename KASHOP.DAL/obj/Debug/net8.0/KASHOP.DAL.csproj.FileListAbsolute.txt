@@ -10,3 +10,16 @@ D:\temp project\KASHOP\KASHOP.DAL\obj\Debug\net8.0\KASHOP.DAL.dll
 D:\temp project\KASHOP\KASHOP.DAL\obj\Debug\net8.0\refint\KASHOP.DAL.dll
 D:\temp project\KASHOP\KASHOP.DAL\obj\Debug\net8.0\KASHOP.DAL.pdb
 D:\temp project\KASHOP\KASHOP.DAL\obj\Debug\net8.0\ref\KASHOP.DAL.dll
+D:\BackendASP\API\Project\KASHOP\KASHOP.DAL\bin\Debug\net8.0\KASHOP.DAL.deps.json
+D:\BackendASP\API\Project\KASHOP\KASHOP.DAL\bin\Debug\net8.0\KASHOP.DAL.dll
+D:\BackendASP\API\Project\KASHOP\KASHOP.DAL\bin\Debug\net8.0\KASHOP.DAL.pdb
+D:\BackendASP\API\Project\KASHOP\KASHOP.DAL\obj\Debug\net8.0\KASHOP.DAL.csproj.AssemblyReference.cache
+D:\BackendASP\API\Project\KASHOP\KASHOP.DAL\obj\Debug\net8.0\KASHOP.DAL.GeneratedMSBuildEditorConfig.editorconfig
+D:\BackendASP\API\Project\KASHOP\KASHOP.DAL\obj\Debug\net8.0\KASHOP.DAL.AssemblyInfoInputs.cache
+D:\BackendASP\API\Project\KASHOP\KASHOP.DAL\obj\Debug\net8.0\KASHOP.DAL.AssemblyInfo.cs
+D:\BackendASP\API\Project\KASHOP\KASHOP.DAL\obj\Debug\net8.0\KASHOP.DAL.csproj.CoreCompileInputs.cache
+D:\BackendASP\API\Project\KASHOP\KASHOP.DAL\obj\Debug\net8.0\KASHOP.DAL.sourcelink.json
+D:\BackendASP\API\Project\KASHOP\KASHOP.DAL\obj\Debug\net8.0\KASHOP.DAL.dll
+D:\BackendASP\API\Project\KASHOP\KASHOP.DAL\obj\Debug\net8.0\refint\KASHOP.DAL.dll
+D:\BackendASP\API\Project\KASHOP\KASHOP.DAL\obj\Debug\net8.0\KASHOP.DAL.pdb
+D:\BackendASP\API\Project\KASHOP\KASHOP.DAL\obj\Debug\net8.0\ref\KASHOP.DAL.dll

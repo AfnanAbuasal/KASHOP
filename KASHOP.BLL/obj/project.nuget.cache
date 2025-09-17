@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Omce2CW/4no=",
+  "dgSpecHash": "kFmubJAUc/c=",
   "success": true,
-  "projectFilePath": "D:\\temp project\\KASHOP\\KASHOP.BLL\\KASHOP.BLL.csproj",
+  "projectFilePath": "D:\\BackendASP\\API\\Project\\KASHOP\\KASHOP.BLL\\KASHOP.BLL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Al-Madani\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\Al-Madani\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
