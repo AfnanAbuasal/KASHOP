@@ -357,3 +357,8 @@ D:\BackendASP\API\Project\KASHOP\KASHOP.PL\obj\Debug\net8.0\refint\KASHOP.PL.dll
 D:\BackendASP\API\Project\KASHOP\KASHOP.PL\obj\Debug\net8.0\KASHOP.PL.pdb
 D:\BackendASP\API\Project\KASHOP\KASHOP.PL\obj\Debug\net8.0\KASHOP.PL.genruntimeconfig.cache
 D:\BackendASP\API\Project\KASHOP\KASHOP.PL\obj\Debug\net8.0\ref\KASHOP.PL.dll
+D:\BackendASP\API\Project\KASHOP\KASHOP.PL\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+D:\BackendASP\API\Project\KASHOP\KASHOP.PL\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+D:\BackendASP\API\Project\KASHOP\KASHOP.PL\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+D:\BackendASP\API\Project\KASHOP\KASHOP.PL\bin\Debug\net8.0\Microsoft.Extensions.Identity.Core.dll
+D:\BackendASP\API\Project\KASHOP\KASHOP.PL\bin\Debug\net8.0\Microsoft.Extensions.Identity.Stores.dll

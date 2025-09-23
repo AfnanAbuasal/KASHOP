@@ -1,8 +1,11 @@
 using KASHOP.BLL.Services.Classes;
 using KASHOP.BLL.Services.Interfaces;
 using KASHOP.DAL.Data;
+using KASHOP.DAL.Models;
 using KASHOP.DAL.Repositories.Classes;
 using KASHOP.DAL.Repositories.Interfaces;
+using KASHOP.DAL.Utilities;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Scalar;
 using Scalar.AspNetCore;
@@ -11,7 +14,7 @@ namespace KASHOP.PL
 {
     public class Program
     {
-        public static void Main(string[] args)
+        public static async Task Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
 
@@ -29,6 +32,9 @@ namespace KASHOP.PL
             builder.Services.AddScoped<ICategoryService, CategoryService>();
             builder.Services.AddScoped<IBrandRepository, BrandRepository>();
             builder.Services.AddScoped<IBrandService, BrandService>();
+            builder.Services.AddScoped<ISeedData, SeedData>();
+
+            builder.Services.AddIdentity<ApplicationUser, IdentityRole>().AddEntityFrameworkStores<ApplicationDbContext>();
 
             var app = builder.Build();
 
@@ -42,6 +48,11 @@ namespace KASHOP.PL
                     options.WithOpenApiRoutePattern("swagger/v1/swagger.json");
                 });
             }
+
+            var scope = app.Services.CreateScope();
+            var objectOfSeedData = scope.ServiceProvider.GetRequiredService<ISeedData>();
+            await objectOfSeedData.DataSeedingAsync();
+            await objectOfSeedData.IdentityDataSeedingAsync();
 
             app.UseHttpsRedirection();
 
