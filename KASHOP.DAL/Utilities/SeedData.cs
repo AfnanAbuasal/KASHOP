@@ -91,9 +91,9 @@ namespace KASHOP.DAL.Utilities
                     Street = "Nablus-Tulkarm Street"
                 };
 
-                await _userManager.CreateAsync(user1, "Pass@1234");
-                await _userManager.CreateAsync(user2, "Pass@1234");
-                await _userManager.CreateAsync(user3, "Pass@1234");
+                await _userManager.CreateAsync(user1, "Admin@123");
+                await _userManager.CreateAsync(user2, "SuperAdmin@123");
+                await _userManager.CreateAsync(user3, "Customer@123");
 
                 await _userManager.AddToRoleAsync(user1, "Admin");
                 await _userManager.AddToRoleAsync(user2, "Super Admin");

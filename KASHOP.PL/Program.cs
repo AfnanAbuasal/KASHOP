@@ -5,10 +5,13 @@ using KASHOP.DAL.Models;
 using KASHOP.DAL.Repositories.Classes;
 using KASHOP.DAL.Repositories.Interfaces;
 using KASHOP.DAL.Utilities;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 using Scalar;
 using Scalar.AspNetCore;
+using System.Text;
 
 namespace KASHOP.PL
 {
@@ -36,6 +39,27 @@ namespace KASHOP.PL
             builder.Services.AddScoped<IAuthenticationService, AuthenticationService>();
 
             builder.Services.AddIdentity<ApplicationUser, IdentityRole>().AddEntityFrameworkStores<ApplicationDbContext>();
+
+            // JWT Authentication Configuration.
+            builder.Services.AddAuthentication(options =>
+            {
+                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme; // Use JWT Bearer instead of cookies.
+                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme; // 401 instead of 404 with unauthorized requests.
+            })
+            .AddJwtBearer(options =>
+            {
+                // What to check to validate the token:
+                options.TokenValidationParameters = new TokenValidationParameters
+                {
+                    ValidateIssuer = false,
+                    ValidateAudience = false,
+                    ValidateLifetime = true,
+                    ValidateIssuerSigningKey = true,
+                    //ValidIssuer = builder.Configuration["Jwt:Issuer"],
+                    //ValidAudience = builder.Configuration["Jwt:Audience"],
+                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration.GetSection("jwtOptions")["SecretKey"])) // Secret key.
+                };
+            });
 
             var app = builder.Build();
 

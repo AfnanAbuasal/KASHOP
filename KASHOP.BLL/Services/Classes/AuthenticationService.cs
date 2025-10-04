@@ -3,9 +3,13 @@ using KASHOP.DAL.DTO.Requests;
 using KASHOP.DAL.DTO.Responses;
 using KASHOP.DAL.Models;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.Extensions.Configuration;
+using Microsoft.IdentityModel.Tokens;
 using System;
 using System.Collections.Generic;
+using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
+using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -14,10 +18,12 @@ namespace KASHOP.BLL.Services.Classes
     public class AuthenticationService : IAuthenticationService
     {
         private readonly UserManager<ApplicationUser> _userManager;
+        private readonly IConfiguration _configuration;
 
-        public AuthenticationService(UserManager<ApplicationUser> userManager)
+        public AuthenticationService(UserManager<ApplicationUser> userManager, IConfiguration configuration)
         {
             _userManager = userManager;
+            _configuration = configuration;
         }
         public async Task<UserResponse> LoginAsync(LoginRequest loginRequest)
         {
@@ -32,7 +38,7 @@ namespace KASHOP.BLL.Services.Classes
             }
             return new UserResponse()
             {
-                Email = loginRequest.Email
+                Token = await GenerateTokenAsync(user)
             };
         }
 
@@ -50,12 +56,40 @@ namespace KASHOP.BLL.Services.Classes
             {
                 return new UserResponse()
                 {
-                    Email = registerRequest.Email
+                    Token = registerRequest.Email
                 };
             } else
             {
                 throw new Exception($"{result.Errors}");
             }
+        }
+    
+        private async Task<String> GenerateTokenAsync(ApplicationUser user)
+        {
+            var userClaims = new List<Claim>()
+            {
+                new Claim(ClaimTypes.NameIdentifier, user.Id),
+                new Claim(ClaimTypes.Email, user.Email),
+                new Claim(ClaimTypes.Name, user.FullName),
+                new Claim(ClaimTypes.UserData, user.UserName)
+            };
+            var roles = await _userManager.GetRolesAsync(user);
+            foreach(var role in roles)
+            {
+                userClaims.Add(new Claim(ClaimTypes.Role, role));
+            }
+
+            var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration.GetSection("jwtOptions")["SecretKey"]));
+            var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
+
+            var token = new JwtSecurityToken(
+                //issuer: _config["Jwt:Issuer"],
+                //audience: _config["Jwt:Audience"],
+                claims: userClaims,
+                expires: DateTime.Now.AddDays(15),
+                signingCredentials: credentials
+            );
+            return new JwtSecurityTokenHandler().WriteToken(token);
         }
     }
 }
