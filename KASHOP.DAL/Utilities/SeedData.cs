@@ -68,7 +68,8 @@ namespace KASHOP.DAL.Utilities
                     PhoneNumber = "0598765432",
                     Country = "Palestine",
                     City = "Qalqilya",
-                    Street = "AS-Salam Street"
+                    Street = "AS-Salam Street",
+                    EmailConfirmed = true
                 };
                 var user2 = new ApplicationUser()
                 {
@@ -78,7 +79,8 @@ namespace KASHOP.DAL.Utilities
                     PhoneNumber = "0598765432",
                     Country = "Palestine",
                     City = "Ramallah",
-                    Street = "AL-Ersal Street"
+                    Street = "AL-Ersal Street",
+                    EmailConfirmed = true
                 };
                 var user3 = new ApplicationUser()
                 {
@@ -88,7 +90,8 @@ namespace KASHOP.DAL.Utilities
                     PhoneNumber = "0598765432",
                     Country = "Palestine",
                     City = "Anabta",
-                    Street = "Nablus-Tulkarm Street"
+                    Street = "Nablus-Tulkarm Street",
+                    EmailConfirmed = true
                 };
 
                 await _userManager.CreateAsync(user1, "Admin@123");

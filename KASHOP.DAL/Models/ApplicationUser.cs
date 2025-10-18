@@ -13,5 +13,7 @@ namespace KASHOP.DAL.Models
         public string? Street { get; set; }
         public string? City { get; set; }
         public string? Country { get; set; }
+        public string? PasswordResetCode { get; set; }
+        public DateTime? PasswordResetCodeExpiration { get; set; }
     }
 }

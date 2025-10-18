@@ -31,5 +31,26 @@ namespace KASHOP.PL.Areas.Identity
             var result = await _authenticationService.LoginAsync(loginRequest);
             return Ok(result);
         }
+
+        [HttpGet("ConfirmEmail")]
+        public async Task<ActionResult<string>> ConfirmEmail([FromQuery] string token, [FromQuery] string userID)
+        {
+            var result = await _authenticationService.ConfirmEmail(token, userID);
+            return Ok(result);
+        }
+
+        [HttpPost("ForgotPassword")]
+        public async Task<ActionResult<string>> ForgotPassword([FromBody]ForgotPasswordRequest forgotPasswordRequest)
+        {
+            var result = await _authenticationService.ForgotPassword(forgotPasswordRequest);
+            return Ok(result);
+        }
+
+        [HttpPatch("ResetPassword")]
+        public async Task<ActionResult<string>> ResetPassword([FromBody] ResetPasswordRequest resetPasswordRequest)
+        {
+            var result = await _authenticationService.ResetPassword(resetPasswordRequest);
+            return Ok(result);
+        }
     }
 }

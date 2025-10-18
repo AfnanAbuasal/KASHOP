@@ -7,6 +7,7 @@ using KASHOP.DAL.Repositories.Interfaces;
 using KASHOP.DAL.Utilities;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Scalar;
@@ -37,8 +38,17 @@ namespace KASHOP.PL
             builder.Services.AddScoped<IBrandService, BrandService>();
             builder.Services.AddScoped<ISeedData, SeedData>();
             builder.Services.AddScoped<IAuthenticationService, AuthenticationService>();
+            builder.Services.AddScoped<IEmailSender, EmailSetting>();
 
-            builder.Services.AddIdentity<ApplicationUser, IdentityRole>().AddEntityFrameworkStores<ApplicationDbContext>();
+            builder.Services.AddIdentity<ApplicationUser, IdentityRole>(
+                options => {
+                    options.Password.RequiredLength = 8;
+                    options.Password.RequireUppercase = true;
+                    options.Password.RequireLowercase = true;
+                    options.Password.RequireDigit = true;
+                    options.Password.RequireNonAlphanumeric = true;
+                    options.User.RequireUniqueEmail = true;
+                }).AddEntityFrameworkStores<ApplicationDbContext>().AddDefaultTokenProviders();
 
             // JWT Authentication Configuration.
             builder.Services.AddAuthentication(options =>

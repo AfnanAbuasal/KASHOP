@@ -122,6 +122,18 @@
           }
         }
       },
+      "Microsoft.AspNetCore.Identity.UI/8.0.20": {
+        "dependencies": {
+          "Microsoft.Extensions.FileProviders.Embedded": "8.0.20",
+          "Microsoft.Extensions.Identity.Stores": "8.0.20"
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.AspNetCore.Identity.UI.dll": {
+            "assemblyVersion": "8.0.20.0",
+            "fileVersion": "8.0.2025.42002"
+          }
+        }
+      },
       "Microsoft.Bcl.AsyncInterfaces/7.0.0": {
         "runtime": {
           "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll": {
@@ -627,6 +639,22 @@
           "lib/net8.0/Microsoft.Extensions.DependencyModel.dll": {
             "assemblyVersion": "9.0.0.9",
             "fileVersion": "9.0.925.41916"
+          }
+        }
+      },
+      "Microsoft.Extensions.FileProviders.Abstractions/8.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.Primitives": "9.0.9"
+        }
+      },
+      "Microsoft.Extensions.FileProviders.Embedded/8.0.20": {
+        "dependencies": {
+          "Microsoft.Extensions.FileProviders.Abstractions": "8.0.0"
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.Extensions.FileProviders.Embedded.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.0.2025.42002"
           }
         }
       },
@@ -1164,7 +1192,8 @@
       "KASHOP.BLL/1.0.0": {
         "dependencies": {
           "KASHOP.DAL": "1.0.0",
-          "Mapster": "7.4.0"
+          "Mapster": "7.4.0",
+          "Microsoft.AspNetCore.Identity.UI": "8.0.20"
         },
         "runtime": {
           "KASHOP.BLL.dll": {
@@ -1256,6 +1285,13 @@
       "sha512": "sha512-Fr4JDsKzzfLyi3vwfVM/bSr4eGvKqbrKgCVEokWUAm62GN1OzJ0ZW0osYyK62S8YphBcwJ0f+wVUXuMh32+a+g==",
       "path": "microsoft.aspnetcore.identity.entityframeworkcore/8.0.20",
       "hashPath": "microsoft.aspnetcore.identity.entityframeworkcore.8.0.20.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Identity.UI/8.0.20": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-2t5dlBCMq2JvQIyNwm+aB+k6af9BtnGx2wPn+pkPkUGlliizl+J2W+3r8eu7OvyxLOp9/nuKuARP6W9CofnHdg==",
+      "path": "microsoft.aspnetcore.identity.ui/8.0.20",
+      "hashPath": "microsoft.aspnetcore.identity.ui.8.0.20.nupkg.sha512"
     },
     "Microsoft.Bcl.AsyncInterfaces/7.0.0": {
       "type": "package",
@@ -1431,6 +1467,20 @@
       "sha512": "sha512-fNGvKct2De8ghm0Bpfq0iWthtzIWabgOTi+gJhNOPhNJIowXNEUE2eZNW/zNCzrHVA3PXg2yZ+3cWZndC2IqYA==",
       "path": "microsoft.extensions.dependencymodel/9.0.9",
       "hashPath": "microsoft.extensions.dependencymodel.9.0.9.nupkg.sha512"
+    },
+    "Microsoft.Extensions.FileProviders.Abstractions/8.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ZbaMlhJlpisjuWbvXr4LdAst/1XxH3vZ6A0BsgTphZ2L4PGuxRLz7Jr/S7mkAAnOn78Vu0fKhEgNF5JO3zfjqQ==",
+      "path": "microsoft.extensions.fileproviders.abstractions/8.0.0",
+      "hashPath": "microsoft.extensions.fileproviders.abstractions.8.0.0.nupkg.sha512"
+    },
+    "Microsoft.Extensions.FileProviders.Embedded/8.0.20": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-EzQEBehL0FiGAXYPuMywDqgOLRTRV7vJ9L6tp+1/KQfJHT1Ag6QWPFRnlwbWFGXJriwibF0DQYf0Z6BWnmG72w==",
+      "path": "microsoft.extensions.fileproviders.embedded/8.0.20",
+      "hashPath": "microsoft.extensions.fileproviders.embedded.8.0.20.nupkg.sha512"
     },
     "Microsoft.Extensions.Identity.Core/8.0.20": {
       "type": "package",

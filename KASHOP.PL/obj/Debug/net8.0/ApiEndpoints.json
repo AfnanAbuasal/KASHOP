@@ -312,6 +312,63 @@
   },
   {
     "ContainingType": "KASHOP.PL.Areas.Identity.AccountController",
+    "Method": "ConfirmEmail",
+    "RelativePath": "api/Identity/Account/ConfirmEmail",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "token",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "userID",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "KASHOP.PL.Areas.Identity.AccountController",
+    "Method": "ForgotPassword",
+    "RelativePath": "api/Identity/Account/ForgotPassword",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "forgotPasswordRequest",
+        "Type": "KASHOP.DAL.DTO.Requests.ForgotPasswordRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "KASHOP.PL.Areas.Identity.AccountController",
     "Method": "Login",
     "RelativePath": "api/Identity/Account/Login",
     "HttpMethod": "POST",
@@ -353,6 +410,32 @@
     "ReturnTypes": [
       {
         "Type": "KASHOP.DAL.DTO.Responses.UserResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "KASHOP.PL.Areas.Identity.AccountController",
+    "Method": "ResetPassword",
+    "RelativePath": "api/Identity/Account/ResetPassword",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "resetPasswordRequest",
+        "Type": "KASHOP.DAL.DTO.Requests.ResetPasswordRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
         "MediaTypes": [
           "text/plain",
           "application/json",
