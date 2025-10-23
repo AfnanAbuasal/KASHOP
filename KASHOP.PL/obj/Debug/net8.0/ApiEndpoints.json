@@ -95,96 +95,57 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "KASHOP.PL.Controllers.BrandsController",
-    "Method": "GetAll",
-    "RelativePath": "api/Brands",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "KASHOP.PL.Controllers.BrandsController",
-    "Method": "Create",
-    "RelativePath": "api/Brands",
+    "ContainingType": "KASHOP.PL.Areas.Admin.ProductsController",
+    "Method": "CreateAsync",
+    "RelativePath": "api/Admin/Products",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "request",
-        "Type": "KASHOP.DAL.DTO.Requests.BrandRequest",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "KASHOP.PL.Controllers.BrandsController",
-    "Method": "GetByID",
-    "RelativePath": "api/Brands/{ID}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "ID",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "KASHOP.PL.Controllers.BrandsController",
-    "Method": "Update",
-    "RelativePath": "api/Brands/{ID}",
-    "HttpMethod": "PATCH",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "ID",
-        "Type": "System.Int32",
-        "IsRequired": true
+        "Name": "Name",
+        "Type": "System.String",
+        "IsRequired": false
       },
       {
-        "Name": "request",
-        "Type": "KASHOP.DAL.DTO.Requests.BrandRequest",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "KASHOP.PL.Controllers.BrandsController",
-    "Method": "Delete",
-    "RelativePath": "api/Brands/{ID}",
-    "HttpMethod": "DELETE",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
+        "Name": "Description",
+        "Type": "System.String",
+        "IsRequired": false
+      },
       {
-        "Name": "ID",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "KASHOP.PL.Controllers.BrandsController",
-    "Method": "ToggleStatus",
-    "RelativePath": "api/Brands/ToggleStatus/{ID}",
-    "HttpMethod": "PATCH",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
+        "Name": "Price",
+        "Type": "System.Decimal",
+        "IsRequired": false
+      },
       {
-        "Name": "ID",
+        "Name": "Discount",
+        "Type": "System.Decimal",
+        "IsRequired": false
+      },
+      {
+        "Name": "Quantity",
         "Type": "System.Int32",
-        "IsRequired": true
+        "IsRequired": false
+      },
+      {
+        "Name": "Rate",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "CategoryID",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "BrandID",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Thumbnail",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []

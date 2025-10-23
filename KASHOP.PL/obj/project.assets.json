@@ -1865,7 +1865,10 @@
         },
         "runtime": {
           "bin/placeholder/KASHOP.DAL.dll": {}
-        }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       }
     }
   },
