@@ -9,23 +9,23 @@ namespace KASHOP.PL.Areas.Customer
     [ApiController]
     [Area("Customer")]
     [Authorize(Roles = "Customer")]
-    public class BrandsController : ControllerBase
+    public class CategoriesController : ControllerBase
     {
-        private readonly IBrandService _brandService;
-        public BrandsController(IBrandService brandService)
+        private readonly ICategoryService _categoryService;
+        public CategoriesController(ICategoryService categoryService)
         {
-            _brandService = brandService;
+            _categoryService = categoryService;
         }
 
         [HttpGet("")]
-        public IActionResult GetAll() => Ok(_brandService.GetAll(true));
+        public IActionResult GetAll() => Ok(_categoryService.GetAll());
 
         [HttpGet("{ID}")]
         public IActionResult GetByID([FromRoute] int ID)
         {
-            var brand = _brandService.GetByID(ID);
-            if (brand is null) return NotFound();
-            return Ok(brand);
+            var category = _categoryService.GetByID(ID);
+            if (category is null) return NotFound();
+            return Ok(category);
         }
     }
 }

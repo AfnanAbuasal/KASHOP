@@ -18,6 +18,6 @@ namespace KASHOP.DAL.DTO.Requests
         public int Rate { get; set; }
         public int CategoryID { get; set; }
         public int? BrandID { get; set; }
-        public IFormFile Thumbnail { get; set; } //Main Image
+        public IFormFile Thumbnail { get; set; }
     }
 }

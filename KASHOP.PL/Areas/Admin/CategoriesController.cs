@@ -1,17 +1,18 @@
 ﻿using KASHOP.BLL.Services.Interfaces;
 using KASHOP.DAL.DTO.Requests;
-using KASHOP.DAL.DTO.Responses;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace KASHOP.PL.Controllers
+namespace KASHOP.PL.Areas.Admin
 {
-    [Route("api/[controller]")]
+    [Route("api/[area]/[controller]")]
     [ApiController]
+    [Area("Admin")]
+    [Authorize(Roles = "Admin,Super Admin")]
     public class CategoriesController : ControllerBase
     {
         private readonly ICategoryService _categoryService;
-
         public CategoriesController(ICategoryService categoryService)
         {
             _categoryService = categoryService;

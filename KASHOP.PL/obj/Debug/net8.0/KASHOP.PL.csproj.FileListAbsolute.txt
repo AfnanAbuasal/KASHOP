@@ -365,3 +365,4 @@ D:\BackendASP\API\Project\KASHOP\KASHOP.PL\bin\Debug\net8.0\Microsoft.Extensions
 D:\BackendASP\API\Project\KASHOP\KASHOP.PL\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 D:\BackendASP\API\Project\KASHOP\KASHOP.PL\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.UI.dll
 D:\BackendASP\API\Project\KASHOP\KASHOP.PL\bin\Debug\net8.0\Microsoft.Extensions.FileProviders.Embedded.dll
+D:\BackendASP\API\Project\KASHOP\KASHOP.PL\bin\Debug\net8.0\KASHOP.PL.staticwebassets.runtime.json

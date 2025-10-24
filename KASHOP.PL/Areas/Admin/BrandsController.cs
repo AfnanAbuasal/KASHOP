@@ -1,4 +1,5 @@
-﻿using KASHOP.BLL.Services.Interfaces;
+﻿using KASHOP.BLL.Services.Classes;
+using KASHOP.BLL.Services.Interfaces;
 using KASHOP.DAL.DTO.Requests;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
@@ -28,11 +29,11 @@ namespace KASHOP.PL.Areas.Admin
             return Ok(brand);
         }
 
-        [HttpPost]
-        public IActionResult Create([FromBody] BrandRequest request)
+        [HttpPost("")]
+        public async Task<IActionResult> CreateAsync([FromForm] BrandRequest brandRequest)
         {
-            var ID = _brandService.Create(request);
-            return Ok(CreatedAtAction(nameof(GetByID), new { ID }));
+            var result = await _brandService.CreateWithFile(brandRequest);
+            return Ok(result);
         }
 
         [HttpPatch("{ID}")]
